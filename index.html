@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sun Dyeing Company | Vibrant Colors & Textile Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800;900&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Color Palette */
+        :root {
+            --primary: #FF5722; /* Vibrant Orange */
+            --secondary: #9C27B0; /* Rich Purple */
+            --accent: #4CAF50; /* Fresh Green */
+            --dark: #1A1A2E; /* Deep Navy */
+            --light: #F5F5F5; /* Off White */
+            --text: #333333; /* Dark Gray */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', Tahoma, Geneva, Verdana, sans-serif;
+        }
+   font */
+        }
+        
+        h1, h2, h3, h4, h5, h6, 
+        .logo h1,
+        .hero h2,
+        .section-title h2,
+        .portfolio-info h3,
+        .process-step h3,
+        .contact-info h3,
+        .footer-column h3 {
+            font-family: 'Raleway', sans-serif; /* Headings font */
+            font-weight: 800;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(26, 26, 46, 0.9);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            color: var(--light);
+            font-size: 1.8rem;
+            margin-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .logo-icon {
+            color: var(--primary);
+            font-size: 2rem;
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), 
+                        url('about.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light);
+            padding: 0 20px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: colorChange 8s infinite alternate;
+        }
+        
+        @keyframes colorChange {
+            0% { color: var(--light); }
+            25% { color: var(--primary); }
+            50% { color: var(--secondary); }
+            75% { color: var(--accent); }
+            100% { color: var(--light); }
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--primary);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 5%;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .about-text p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 100px 5%;
+            background-color: var(--light);
+        }
+        .portfolio-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-video {
+    transform: scale(1.05);
+}
+
+.play-pause-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 87, 34, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.play-pause-btn:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            height: 300px;
+            cursor: pointer;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(26, 26, 46, 0.8));
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-info h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-info p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 100px 5%;
+            background-color: white;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 60px;
+            right: -20px;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .step-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 87, 34, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0); }
+        }
+        
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .process-step p {
+            line-height: 1.6;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 5%;
+            background-color: var(--dark);
+            color: var(--light);
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--light);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: none;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse-green 2s infinite;
+            transition: all 0.3s ease;
+        }
+        
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0f0f1a;
+            color: var(--light);
+            padding: 60px 5% 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-column p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+        }
+        
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+            
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--dark);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: all 0.5s ease;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-text, .contact-info {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .step-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-palette logo-icon"></i>
+            <h1>Sun Dyeing</h1>
+        </div>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Transform with Color</h2>
+            <p>At Sun Dyeing Company, we create vibrant, lasting colors that bring life to textiles. Our innovative dyeing techniques ensure quality and sustainability in every fabric we touch.</p>
+            <a href="#contact" class="cta-button">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>About Us</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Bringing Colors to Life Since 2005</h3>
+                <p>Sun Dyeing Company specializes in creating vibrant, eco-friendly dyes for textiles of all kinds. Our commitment to quality and innovation has made us a leader in the textile dyeing industry.</p>
+                <p>We combine traditional techniques with modern technology to produce colors that are not only beautiful but also long-lasting and environmentally responsible.</p>
+                <p>Our team of skilled artisans and technicians work together to deliver exceptional results for our clients, whether for fashion, home textiles, or industrial applications.</p>
+            </div>
+            <div class="about-image">
+                <img src="about.jpg" alt="Dyeing Process">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-title">
+            <h2>Our Portfolio</h2>
+        </div>
+        <div class="portfolio-grid">
+    <div class="portfolio-item">
+        <video class="portfolio-video" loop muted playsinline>
+            <source src="p1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="portfolio-overlay">
+            <div class="portfolio-info">
+                <h3>Fabric Dyeing</h3>
+                <p>Vibrant colors on various textiles</p>
+                <button class="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- More video items... -->
+</div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <video class="portfolio-video" loop muted playsinline>
+            <source src="p2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Garment Dyeing</h3>
+                        <p>Custom colors for clothing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <video class="portfolio-video" loop muted playsinline>
+            <source src="p3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Yarn Dyeing</h3>
+                        <p>Colorful threads for weaving</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <video class="portfolio-video" loop muted playsinline>
+            <source src="p4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Tie-Dye Patterns</h3>
+                        <p>Traditional and modern techniques</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <video class="portfolio-video" loop muted playsinline>
+            <source src="p5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Eco-Friendly Dyes</h3>
+                        <p>Natural and sustainable options</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <video class="portfolio-video" loop muted playsinline>
+            <source src="p6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Industrial Solutions</h3>
+                        <p>Large-scale dyeing operations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-title">
+            <h2>Our Process</h2>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Color Formulation</h3>
+                <p>Our experts create custom color formulas based on your specific requirements and material type.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h3>Dye Application</h3>
+                <p>We apply dyes using state-of-the-art equipment to ensure even coverage and color fastness.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3>Fixing & Curing</h3>
+                <p>The dyed materials undergo a precise fixing process to lock in colors for long-lasting vibrancy.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Quality Control</h3>
+                <p>Every batch undergoes rigorous testing to ensure it meets our high standards and your expectations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Virugambakkam, <br>Chennai</p>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 73584 27653</p>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@sundyeing.com</p>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sun_dyeing_company?igsh=MXNlY3JxdHNqaW1ueg=="><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sun_dyeing_company?igsh=MXNlY3JxdHNqaW1ueg=="><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sun_dyeing_company?igsh=MXNlY3JxdHNqaW1ueg=="><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="leadForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/15551234567?text=Hi%20Sun%20Dyeing%20Company,%20I%20would%20like%20to%20know%20more%20about%20your%20services" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Sun Dyeing</h3>
+                <p>Transforming textiles with vibrant, sustainable colors since 2005. We're committed to excellence in every dyeing project.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Fabric Dyeing</a></li>
+                    <li><a href="#">Garment Dyeing</a></li>
+                    <li><a href="#">Yarn Dyeing</a></li>
+                    <li><a href="#">Eco-Friendly Dyes</a></li>
+                    <li><a href="#">Custom Color Matching</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter to get updates on our latest projects and dyeing techniques.</p>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email">
+                </div>
+                <button class="submit-btn">Subscribe</button>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Sun Dyeing Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav ul').classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(26, 26, 46, 0.95)';
+                header.style.padding = '10px 5%';
+            } else {
+                header.style.backgroundColor = 'rgba(26, 26, 46, 0.9)';
+                header.style.padding = '15px 5%';
+            }
+        });// Auto-play videos when they come into view
+function initVideoAutoplay() {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                // Video is in viewport - play it
+                video.play().catch(e => {
+                    console.log('Autoplay prevented:', e);
+                });
+            } else {
+                // Video is out of viewport - pause it
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.5 // Play when 50% of video is visible
+    });
+
+    // Observe all portfolio videos
+    document.querySelectorAll('.portfolio-video').forEach(video => {
+        videoObserver.observe(video);
+    });
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    initVideoAutoplay();
+});
+// Video play/pause functionality
+document.querySelectorAll('.portfolio-video').forEach(video => {
+    const playBtn = video.parentElement.querySelector('.play-pause-btn');
+    const icon = playBtn.querySelector('i');
+    
+    playBtn.addEventListener('click', function() {
+        if (video.paused) {
+            video.play();
+            icon.className = 'fas fa-pause';
+        } else {
+            video.pause();
+            icon.className = 'fas fa-play';
+        }
+    });
+    
+    // Pause video when hovering out
+    video.parentElement.addEventListener('mouseleave', function() {
+        video.pause();
+        icon.className = 'fas fa-play';
+    });
+});
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Portfolio item animation on scroll
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        portfolioItems.forEach(item => {
+            item.style.opacity = 0;
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
